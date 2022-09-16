@@ -24,7 +24,7 @@ const Opet: FC<{ priceData: PriceData[] }> = ({ priceData }) => {
                   <span>{item.type}</span>
                   <span className='block text-xs text-yellow-500'>{item.name}</span>
                 </div>
-                <span className='text-2xl font-price'>{item.price % 1 ? item.price : item.price + '.00'}</span>
+                <span className='text-2xl font-price'>{(Math.round(item.price * 100) / 100).toFixed(2)}</span>
               </div>
             </div>
           ))}
