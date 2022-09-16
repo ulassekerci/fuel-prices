@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('/ds-digital.ttf');
+}
+
+@layer components {
+  .fuel {
+    @apply mt-2 w-64 lg:w-48 h-9 bg-slate-700 grid place-items-center select-none cursor-pointer;
+  }
+  .locationSelect {
+    @apply h-8 w-5/12 text-lg bg-transparent border-b-2 border-yellow-500;
+  }
+  .litercost {
+    @apply border-b-2 border-yellow-500 cursor-pointer;
+  }
+}
