@@ -30,7 +30,7 @@ const Home: NextPage<{ prices: PriceData[]; locations: Locations }> = ({ prices,
       </Head>
       <Opet priceData={priceData} />
       <div className='lg:w-1/2'>
-        <Calculator priceData={priceData} key={Math.random()} />
+        <Calculator priceData={priceData} />
         <LocationSelector locationData={locations} updatePrices={updatePrices} />
       </div>
     </div>
