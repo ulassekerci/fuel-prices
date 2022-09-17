@@ -4,12 +4,11 @@ const getData = async (province: string, district: string) => {
   const opetData = await getOpetData(province)
   const aygazData = await getAygazData(province)
 
-  const cankayaIndex = opetData.findIndex((item) => item.districtCode === district)
-
+  const districtIndex = opetData.findIndex((item) => item.districtCode === district)
   const prices = {
-    ecoforce: opetData[cankayaIndex].prices.filter((item) => item.productShortName === 'MT_ECO')[0],
-    ultraforce: opetData[cankayaIndex].prices.filter((item) => item.productShortName === 'MT_ULT')[0],
-    gasoline: opetData[cankayaIndex].prices.filter((item) => item.productShortName === 'KURS')[0],
+    ecoforce: opetData[districtIndex].prices.filter((item) => item.productShortName === 'MT_ECO')[0],
+    ultraforce: opetData[districtIndex].prices.filter((item) => item.productShortName === 'MT_ULT')[0],
+    gasoline: opetData[districtIndex].prices.filter((item) => item.productShortName === 'KURS')[0],
   }
 
   const priceData = [
