@@ -34,7 +34,7 @@ const Home: NextPage<{ prices: PriceData[]; locations: Locations }> = ({ prices,
         <Calculator priceData={priceData} />
         <LocationSelector locationData={locations} updatePrices={updatePrices} />
       </div>
-      <a href='https://github.com/ulassekerci/fuel-prices' className='absolute right-4 bottom-4'>
+      <a href='https://github.com/ulassekerci/fuel-prices' className='absolute right-4 bottom-4 hidden lg:inline'>
         <Image src='/github.png' width={32} height={32} />
       </a>
     </div>
