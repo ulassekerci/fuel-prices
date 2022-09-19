@@ -8,10 +8,15 @@ const Calculator: FC<{ priceData: PriceData[] }> = ({ priceData }) => {
   const [selectedFuel, setSelectedFuel] = useState('ecoforce')
 
   const handleKeypad = (key: number | 'del') => {
-    if (input === 'liter') {
-      key === 'del' ? setLiter(Math.floor(liter / 10)) : setLiter(liter * 10 + key)
+    if (key === 'del') {
+      input === 'liter' ? setLiter(Math.floor(liter / 10)) : setCost(Math.floor(cost / 10))
     } else {
-      key === 'del' ? setCost(Math.floor(cost / 10)) : setCost(cost * 10 + key)
+      if (input === 'liter' && liter <= 99) {
+        setLiter(liter * 10 + key)
+      }
+      if (input === 'cost' && cost <= 9999) {
+        setCost(cost * 10 + key)
+      }
     }
   }
 
