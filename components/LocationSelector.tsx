@@ -27,7 +27,7 @@ const LocationSelector: FC<{
   }
 
   return (
-    <div className='text-white bg-slate-900 h-[160px] lg:rounded-xl lg:mt-4 flex flex-col justify-start'>
+    <div className='text-white bg-slate-800 h-[160px] lg:rounded-xl lg:mt-4 flex flex-col justify-start'>
       <span className='text-2xl font-semibold m-4 mt-6'>Konum</span>
       <div className='flex justify-around mt-2'>
         <select className='locationSelect' value={province} onChange={handleProvinceSelect}>

@@ -15,7 +15,7 @@ const getData = async (province: string, district: string) => {
     { type: 'Motorin', name: 'Ecoforce', slug: 'ecoforce', price: prices.ecoforce.amount },
     { type: 'Motorin', name: 'Ultraforce', slug: 'ultraforce', price: prices.ultraforce.amount },
     { type: 'Benzin', name: 'Kurşunsuz 95', slug: 'gasoline', price: prices.gasoline.amount },
-    { type: 'Otogaz', name: 'Aygaz', slug: 'lpg', price: Number(aygazData.substring(1, 6)) },
+    { type: 'Otogaz', name: 'Aygaz Otogaz', slug: 'lpg', price: Number(aygazData.substring(1, 6)) },
   ]
 
   return {

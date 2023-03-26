@@ -40,7 +40,7 @@ const Opet: FC<{ priceData: PriceData[] }> = ({ priceData }) => {
           <span className='block italic -mt-1 mr-2 text-sm text-right leading-none'>on the go</span>
         </div>
       </div>
-      <span className='text-white mt-5 text-lg font-semibold'>ulaş petrol</span>
+      <span className='text-white mt-5 text-lg font-semibold'>react petrol</span>
     </div>
   )
 }

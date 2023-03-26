@@ -38,7 +38,7 @@ const Calculator: FC<{ priceData: PriceData[] }> = ({ priceData }) => {
   }, [selectedFuel, liter, cost, priceData])
 
   return (
-    <div className='text-white bg-slate-900 lg:h-[420px] pb-4 lg:rounded-xl'>
+    <div className='text-white bg-slate-800 lg:h-[420px] pb-4 lg:rounded-xl'>
       <div className='grid place-items-center'>
         <div className='flex justify-center relative w-64 lg:w-full'>
           <div className='bg-blue-900 flex flex-col text-right mt-6 px-2 w-56 lg:w-96'>
