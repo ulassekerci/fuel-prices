@@ -42,14 +42,14 @@ const getOpetData = async (province: string) => {
 }
 
 const getAygazData = async (province: string) => {
-  const aygazDateRequest = await fetch('https://www.aygaz.com.tr/otogaz/otogazapi.aspx/gecerlilikTarihleriGetir', {
+  const aygazDateRequest = await fetch('https://kurumsal.aygaz.com.tr/otogaz/otogazapi.aspx/gecerlilikTarihleriGetir', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ il: province }),
   })
   const aygazDates = await aygazDateRequest.json()
   const latest = JSON.parse(aygazDates.d)[0]
-  const aygazPriceRequest = await fetch('https://www.aygaz.com.tr/otogaz/otogazapi.aspx/fiyatGetir', {
+  const aygazPriceRequest = await fetch('https://kurumsal.aygaz.com.tr/otogaz/otogazapi.aspx/fiyatGetir', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ il: province, tarih: latest }),
